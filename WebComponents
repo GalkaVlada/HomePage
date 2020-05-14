@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet">
+  </head>
+  <body>
+
+<user-info>avatar ="https://cutt.ly/lyQbj4Y";name = "Mouse"</user-info>
+<-- Я не разобралась с темой и этот код не работает и я не знаю по какой причине-->
+<script>
+
+customElements.define('user-info', class extends HTMLElement {
+
+  connectedCallback() {
+    
+  }
+
+});
+</script>
+
+
+
+  </body>
+   </html>
