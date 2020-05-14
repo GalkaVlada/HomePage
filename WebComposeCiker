@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet">
+  </head>
+  <body>
+
+<e-info>
+<div class="counter">
+	<button class="counter__btn" data-direction="minus">-</button>
+	<input type="text" value="0" class="counter__value">
+	<button class="counter__btn" data-direction="plus">+</button>
+</div>
+</e-info>
+
+ <script>
+
+customElements.define('e-info', class extends HTMLElement {
+
+  connectedCallback() {
+    
+  }
+
+});
+
+ const counter = function () {
+  const btns = document.querySelectorAll('.counter__btn');
+
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const direction = this.dataset.direction;
+      const inp = this.parentElement.querySelector('.counter__value');
+      const currentValue = +inp.value;
+      let newValue;
+
+      if (direction === 'plus') {
+        newValue = currentValue + 1;
+      } else {
+        newValue = currentValue - 1 > 0 ? currentValue - 1 : 0;
+      }
+
+      inp.value = newValue;
+    })
+  })
+
+}
+
+counter();
+
+ </script>
+ 
+    <style>
+	input{
+	border:0px;
+	width:10px;
+	}
+	button{
+	border-radius:50px;
+	background-color:#fff;
+	}
+	
+	
+	</style>
+  </body>
+   </html>
