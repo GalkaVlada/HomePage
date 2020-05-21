@@ -1,0 +1,8 @@
+let arr = [1,2,3,4,5, {hello: 'world'}];
+delete arr[4];
+console.log(arr.join(' && '));
+console.log(arr);
+let array = [1,2,3,4,5, {hello: 'world'}];
+array.splice(3, 1, 10);
+array.reverse();
+console.log(array);
