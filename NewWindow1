@@ -1,0 +1,2 @@
+let NewWindow=window.open();
+setTimeout(() => NewWindow.close(), 1000);
